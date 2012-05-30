@@ -1,13 +1,13 @@
 function display_results(msg) {
     var rate = msg;
     var value = parseFloat($('#value').val());
-    if(value == "") value = 0;
+    if(value == NaN) value = 0;
     var shipping = parseFloat($('#shipping').val());
-    if(shipping == "") shipping = 0;
+    if(shipping == NaN) shipping = 0;
     var gift = $('#gift').val();
     if(gift == "yes") { gift = true } else { gift = false };
     var fee = parseFloat($('#fee').val());
-    if(fee == "") fee = 0;
+    if(fee == NaN) fee = 0;
 
     var converted_value = value*rate;
     var converted_shipping = shipping*rate;
