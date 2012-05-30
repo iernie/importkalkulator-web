@@ -12,10 +12,10 @@ function display_results(msg) {
     var output = "";
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
     
-    var list = $('#listview');
-    list.empty();
-    list.append(output);
-    list.listview("refresh");
+    var resultlist = $('#results').find('.resultlist');
+    resultlist.empty();
+    resultlist.append(output);
+    resultlist.listview("refresh");
     $.mobile.changePage("#results");
 }
 
