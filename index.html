@@ -33,7 +33,7 @@
 
     <body>
 
-        <div data-role="page" id="one">
+        <div data-role="page" id="front">
 
             <div data-role="header">
                 <h1>Importkalkulator</h1>
@@ -103,7 +103,7 @@
 
         </div>
 
-        <div data-role="page" data-rel="back" id="two">
+        <div data-role="page" id="result">
 
             <div data-role="header">
                 <h1>Resultat</h1>
@@ -111,9 +111,10 @@
 
             <div data-role="content">
 
-                <ul data-role="listview" id="results">
-                    <li>Kurs<div class="ui-li-count">42</div></li>
+                <ul data-role="listview" id="results-list">
                 </ul>
+
+                <p><a href="#front" data-direction="reverse" data-role="button">Tilbake</a></p> 
 
             </div>
         </div>
