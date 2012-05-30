@@ -12,7 +12,7 @@ function display_results(msg) {
     var output = "";
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
     
-    $('#results-list').html(output);
+    $('#listview').html(output).listview();
     $.mobile.changePage("#results");
 }
 
