@@ -9,8 +9,28 @@ function display_results(msg) {
     var fee = $('#fee').val();
     if(fee == "") fee = 0;
 
+    var converted_value = value*rate;
+    var converted_shipping = shipping*rate;
+
+    var limit = 200;
+    if(gift) {
+        limit = 1000;
+    }
+
+    var vat = 0;
+    if(converted_value >= limit) {
+        vat = (converted_value + converted_shipping) * 0.25;
+    }
+
+    var total = converted_value + converted_shipping + fee + vat;
+
     var output = "";
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
+    output += "<li>Pris<div class=\"ui-li-count\">"+value*rate+"</div></li>";
+    output += "<li>Frakt<div class=\"ui-li-count\">"+shipping*rate+"</div></li>";
+    output += "<li>Gebyr<div class=\"ui-li-count\">"+fee+"</div></li>";
+    output += "<li>MVA<div class=\"ui-li-count\">"+vat+"</div></li>";
+    output += "<li>Total<div class=\"ui-li-count\">"+total+"</div></li>";
     
     $.mobile.changePage("#results");
 
