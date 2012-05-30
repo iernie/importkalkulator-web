@@ -1,0 +1,126 @@
+<!doctype html>
+<!-- Conditional comment for mobile ie7 blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>Importkalkulator</title>
+        <meta name="description" content="">
+
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
+        <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
+
+        <!-- <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+        <!-- <script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"img/startup-tablet-landscape.png":"img/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"img/startup-retina.png":"img/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script> -->
+
+        <!-- <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script> -->
+
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/libs/jquery.mobile-1.1.0.min.css" />
+
+        <script src="js/libs/modernizr-2.0.6.min.js"></script>
+    </head>
+
+    <body>
+
+        <div data-role="page">
+
+            <div data-role="header">
+                <h1>Importkalkulator</h1>
+            </div>
+
+            <div data-role="content">
+
+                <form action="javascript:toll()" method="post">
+
+                    <div data-role="fieldcontain">
+                        <label for="value">Verdi</label>
+                        <input type="text" name="value" id="value" value=""/>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="shipping">Frakt</label>
+                        <input type="text" name="shipping" id="shipping" value=""/>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="currency" class="select">Valuta</label>
+                        <select name="currency" id="currency">
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="AED">AED</option>
+                            <option value="AUD">AUD</option>
+                            <option value="CAD">CAD</option>
+                            <option value="CHF">CHF</option>
+                            <option value="CZK">CZK</option>
+                            <option value="DKK">DKK</option>
+                            <option value="HKD">HKD</option>
+                            <option value="INR">INR</option>
+                            <option value="JPY">JPY</option>
+                            <option value="LTL">LTL</option>
+                            <option value="LVL">LVL</option>
+                            <option value="NOK">NOK</option>
+                            <option value="NZD">NZD</option>
+                            <option value="PKR">PKR</option>
+                            <option value="PLN">PLN</option>
+                            <option value="SEK">SEK</option>
+                            <option value="SGD">SGD</option>
+                            <option value="THB">THB</option>
+                            <option value="ZAR">ZAR</option>
+                        </select>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="gift">Gave</label>
+                        <select name="gift" id="gift" data-role="slider">
+                            <option value="no">Nei</option>
+                            <option value="yes">Ja</option>
+                        </select>
+                    </div>
+
+                    <div data-role="fieldcontain">
+                        <label for="fee">Fortollingsavgift</label>
+                        <input type="text" name="fee" id="fee" value="110"/>
+                    </div>
+
+                    <button type="submit">Kalkuler</button>
+                </form>
+
+                <ul data-role="listview">
+                </ul>
+
+            </div>
+
+        </div>
+
+        <script src="js/libs/jquery-1.7.1.min.js"></script>
+        <script src="js/libs/jquery.mobile-1.1.0.min.js"></script>
+        <script src="js/script.js"></script>
+
+
+        <!-- scripts concatenated and minified via ant build script -->
+        <script src="js/helper.js"></script>
+        <!-- end concatenated and minified scripts-->
+
+        <!-- <script src="https://getfirebug.com/firebug-lite.js"></script> -->
+
+        <!--<script> // Change UA-XXXXX-X to be your site's ID
+        var _gaq=[["_setAccount","UA-3552846-4"],["_trackPageview"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+        s.parentNode.insertBefore(g,s)}(document,"script"));
+        </script>-->
+
+    </body>
+</html>
