@@ -14,8 +14,8 @@ function display_results(msg) {
     
     var list = $('#listview');
     list.empty();
-    list.html(output);
-    list.listview();
+    list.append(output);
+    list.listview("refresh");
     $.mobile.changePage("#results");
 }
 
@@ -30,3 +30,7 @@ function toll() {
         }
     });
 }
+
+$(document).ready(function(){
+    $('#listview').listview();
+});
