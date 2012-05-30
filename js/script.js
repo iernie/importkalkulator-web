@@ -1,5 +1,6 @@
 function display_results(msg) {
     var rate = parseFloat(msg);
+    var currency = $('#currency').val();
     var value = $('#value').val();
     if(value == "") value = 0;
     var shipping = $('#shipping').val();
@@ -25,9 +26,9 @@ function display_results(msg) {
     var total = converted_value + converted_shipping + parseFloat(fee) + vat;
 
     var output = "";
-    output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
-    output += "<li>Pris<div class=\"ui-li-count\">"+value*rate+"</div></li>";
-    output += "<li>Frakt<div class=\"ui-li-count\">"+shipping*rate+"</div></li>";
+    output += "<li>Kurs "+currency+"<div class=\"ui-li-count\">"+rate+"</div></li>";
+    output += "<li>Pris<div class=\"ui-li-count\">"+converted_value.toFixed(2)+"</div></li>";
+    output += "<li>Frakt<div class=\"ui-li-count\">"+converted_shipping.toFixed(2)+"</div></li>";
     output += "<li>Gebyr<div class=\"ui-li-count\">"+fee+"</div></li>";
     output += "<li>MVA<div class=\"ui-li-count\">"+vat.toFixed(2)+"</div></li>";
     output += "<li>Total<div class=\"ui-li-count\">"+total.toFixed(2)+"</div></li>";
