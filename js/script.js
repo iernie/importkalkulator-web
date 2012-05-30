@@ -29,7 +29,7 @@ function display_results(msg) {
     output += "<li>Kurs ("+currency+")<div class=\"ui-li-count\">"+rate+"</div></li>";
     output += "<li>Pris<div class=\"ui-li-count\">"+converted_value.toFixed(2)+"</div></li>";
     output += "<li>Frakt<div class=\"ui-li-count\">"+converted_shipping.toFixed(2)+"</div></li>";
-    output += "<li>Gebyr<div class=\"ui-li-count\">"+fee+"</div></li>";
+    output += "<li>Fortollingsavgift<div class=\"ui-li-count\">"+fee+"</div></li>";
     output += "<li>MVA<div class=\"ui-li-count\">"+vat.toFixed(2)+"</div></li>";
     output += "<li>Totalt<div class=\"ui-li-count\">"+total.toFixed(2)+"</div></li>";
     
