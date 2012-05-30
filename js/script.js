@@ -14,8 +14,8 @@ function display_results(msg) {
     
     var list = $('#listview');
     list.empty();
-    list.appendTo(output);
-    list.listview("refresh");
+    list.html(output);
+    list.listview();
     $.mobile.changePage("#results");
 }
 
