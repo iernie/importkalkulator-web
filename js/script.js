@@ -1,16 +1,16 @@
 function display_results(msg) {
-    var rate = msg;
-    var value = parseFloat($('#value').val());
-    if(value == NaN) value = 0;
-    var shipping = parseFloat($('#shipping').val());
-    if(shipping == NaN) shipping = 0;
+    var rate = parseFloat(msg);
+    var value = $('#value').val();
+    if(value == "") value = 0;
+    var shipping = $('#shipping').val();
+    if(shipping == "") shipping = 0;
     var gift = $('#gift').val();
     if(gift == "yes") { gift = true } else { gift = false };
-    var fee = parseFloat($('#fee').val());
-    if(fee == NaN) fee = 0;
+    var fee = $('#fee').val();
+    if(fee == "") fee = 0;
 
-    var converted_value = value*rate;
-    var converted_shipping = shipping*rate;
+    var converted_value = parseFloat(value)*rate;
+    var converted_shipping = parseFloat(shipping)*rate;
 
     var limit = 200;
     if(gift) {
@@ -22,7 +22,7 @@ function display_results(msg) {
         vat = (converted_value + converted_shipping) * 0.25;
     }
 
-    var total = converted_value + converted_shipping + fee + vat;
+    var total = converted_value + converted_shipping + parseFloat(fee) + vat;
 
     var output = "";
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
@@ -30,7 +30,7 @@ function display_results(msg) {
     output += "<li>Frakt<div class=\"ui-li-count\">"+shipping*rate+"</div></li>";
     output += "<li>Gebyr<div class=\"ui-li-count\">"+fee+"</div></li>";
     output += "<li>MVA<div class=\"ui-li-count\">"+vat+"</div></li>";
-    output += "<li>Totalt<div class=\"ui-li-count\">"+total+"</div></li>";
+    output += "<li>Total<div class=\"ui-li-count\">"+total+"</div></li>";
     
     $.mobile.changePage("#results");
 
