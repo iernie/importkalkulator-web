@@ -29,8 +29,8 @@ function display_results(msg) {
     output += "<li>Pris<div class=\"ui-li-count\">"+value*rate+"</div></li>";
     output += "<li>Frakt<div class=\"ui-li-count\">"+shipping*rate+"</div></li>";
     output += "<li>Gebyr<div class=\"ui-li-count\">"+fee+"</div></li>";
-    output += "<li>MVA<div class=\"ui-li-count\">"+vat+"</div></li>";
-    output += "<li>Total<div class=\"ui-li-count\">"+total+"</div></li>";
+    output += "<li>MVA<div class=\"ui-li-count\">"+vat.toFixed(2)+"</div></li>";
+    output += "<li>Total<div class=\"ui-li-count\">"+total.toFixed(2)+"</div></li>";
     
     $.mobile.changePage("#results");
 
