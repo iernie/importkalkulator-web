@@ -10,8 +10,9 @@ function display_results(msg) {
     if(fee == "") fee = 0;
 
     var output = "";
-    output += "<li>"+rate+"<div class=\"ui-li-count\">"+rate+"</div></li>";
-    alert(output);
+    output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
+    
+    $('#results').html(output);
 }
 
 function toll() {
