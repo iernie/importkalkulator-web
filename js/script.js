@@ -13,11 +13,11 @@ function display_results(msg) {
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
     
     $.mobile.changePage("#results");
-    
-    var resultlist = $('#resultlist');
+
+    var resultlist = $("ul:jqmData(role='listview')");
     resultlist.empty();
-    resultlist.html(output);
-    resultlist.listview();
+    resultlist.append(output);
+    resultlist.listview("refresh");
 }
 
 function toll() {
@@ -26,8 +26,6 @@ function toll() {
         type: "POST",
         url: "downloader.php",
         data: "currency=" + currency,
-        success: function(msg){
-            display_results(msg);
-        }
+        success: display_results
     });
 }
