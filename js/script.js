@@ -13,6 +13,7 @@ function display_results(msg) {
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
     
     $('#results').html(output);
+    $.mobile.changePage("#two");
 }
 
 function toll() {

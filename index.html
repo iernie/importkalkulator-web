@@ -33,7 +33,7 @@
 
     <body>
 
-        <div data-role="page">
+        <div data-role="page" id="one">
 
             <div data-role="header">
                 <h1>Importkalkulator</h1>
@@ -97,11 +97,25 @@
                     <button type="submit">Kalkuler</button>
                 </form>
 
-                <ul id="results" data-role="listview">
-                </ul>
+                
 
             </div>
 
+        </div>
+
+        <div data-role="page" id="two">
+
+            <div data-role="header">
+                <h1>Resultat</h1>
+            </div>
+
+            <div data-role="content">
+
+                <ul data-role="listview" id="results">
+                    <li>Kurs<div class="ui-li-count">42</div></li>
+                </ul>
+
+            </div>
         </div>
 
         <script src="js/libs/jquery-1.7.1.min.js"></script>
