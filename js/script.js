@@ -14,7 +14,9 @@ function display_results(msg) {
     
     var resultlist = $('#results').find('.resultlist');
     resultlist.empty();
-    resultlist.append(output);
+    resultlist.html(output);
+    console.log(output);
+    console.log(resultlist);
     resultlist.listview("refresh");
     $.mobile.changePage("#results");
 }
