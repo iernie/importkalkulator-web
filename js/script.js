@@ -1,12 +1,12 @@
 function display_results(msg) {
     var rate = msg;
-    var value = $('#value').val();
+    var value = parseFloat($('#value').val());
     if(value == "") value = 0;
-    var shipping = $('#shipping').val();
+    var shipping = parseFloat($('#shipping').val());
     if(shipping == "") shipping = 0;
     var gift = $('#gift').val();
     if(gift == "yes") { gift = true } else { gift = false };
-    var fee = $('#fee').val();
+    var fee = parseFloat($('#fee').val());
     if(fee == "") fee = 0;
 
     var converted_value = value*rate;
@@ -30,7 +30,7 @@ function display_results(msg) {
     output += "<li>Frakt<div class=\"ui-li-count\">"+shipping*rate+"</div></li>";
     output += "<li>Gebyr<div class=\"ui-li-count\">"+fee+"</div></li>";
     output += "<li>MVA<div class=\"ui-li-count\">"+vat+"</div></li>";
-    output += "<li>Total<div class=\"ui-li-count\">"+total+"</div></li>";
+    output += "<li>Totalt<div class=\"ui-li-count\">"+total+"</div></li>";
     
     $.mobile.changePage("#results");
 
