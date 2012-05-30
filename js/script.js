@@ -15,9 +15,7 @@ function display_results(msg) {
     var resultlist = $('#resultlist');
     resultlist.empty();
     resultlist.html(output);
-    console.log(output);
-    console.log(resultlist);
-    resultlist.listview("refresh");
+    resultlist.listview();
     $.mobile.changePage("#results");
 }
 
