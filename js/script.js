@@ -32,7 +32,3 @@ function toll() {
         }
     });
 }
-
-$(document).ready(function(){
-    $('#listview').listview();
-});
