@@ -12,12 +12,12 @@ function display_results(msg) {
     var output = "";
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
     
+    $.mobile.changePage("#results");
+    
     var resultlist = $('#resultlist');
-    resultlist.listview();
     resultlist.empty();
     resultlist.html(output);
-    resultlist.listview("refresh");
-    $.mobile.changePage("#results");
+    resultlist.listview();
 }
 
 function toll() {
