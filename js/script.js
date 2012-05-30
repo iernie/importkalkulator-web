@@ -12,7 +12,7 @@ function display_results(msg) {
     var output = "";
     output += "<li>Kurs<div class=\"ui-li-count\">"+rate+"</div></li>";
     
-    var resultlist = $('#results').find('.resultlist');
+    var resultlist = $('#resultlist');
     resultlist.empty();
     resultlist.html(output);
     console.log(output);
